@@ -1,5 +1,8 @@
 # CSE 4413 Computer Graphics Final Project
 
+## References
+- [Data](data/Reference.md)
+
 ## Project Description
 The final project is a project for students in groups of up to two persons. The purpose of the project is for a student to explore an area of computer graphics in some depth. Example projects are:
 - Implement a small web-based graphics engine.
