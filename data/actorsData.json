@@ -1,0 +1,541 @@
+[
+  {
+    "movieName": "Creed II",
+    "name": "Michael B. Jordan",
+    "tweets": 9030,
+    "following": 547,
+    "followers": 1015554
+  },
+  {
+    "movieName": "Creed II",
+    "name": "Sylvester Stallone",
+    "tweets": 1754,
+    "following": 24,
+    "followers": 2799350
+  },
+  {
+    "movieName": "Creed II",
+    "name": "Tessa Thompson",
+    "tweets": 4408,
+    "following": 520,
+    "followers": 300371
+  },
+  {
+    "movieName": "Creed II",
+    "name": "Dolph Lundgren",
+    "tweets": 2580,
+    "following": 161,
+    "followers": 220056
+  },
+  {
+    "movieName": "Creed II",
+    "name": "Florian Munteanu",
+    "tweets": 105,
+    "following": 0,
+    "followers": 4688
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Robert Downey Jr.",
+    "tweets": 560,
+    "following": 63,
+    "followers": 11945987
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Chris Hemsworth",
+    "tweets": 311,
+    "following": 89,
+    "followers": 4371059
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Mark Ruffalo",
+    "tweets": 40934,
+    "following": 1793,
+    "followers": 4301618
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Chris Evans",
+    "tweets": 1118,
+    "following": 349,
+    "followers": 10042294
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Don Cheadle",
+    "tweets": 499,
+    "following": 327,
+    "followers": 637672
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Tom Holland",
+    "tweets": 1309,
+    "following": 103,
+    "followers": 2508134
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Chadwick Boseman",
+    "tweets": 458,
+    "following": 139,
+    "followers": 1055884
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Zoe Saldana",
+    "tweets": 4200,
+    "following": 157,
+    "followers": 909893
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Karen Gillan",
+    "tweets": 3959,
+    "following": 671,
+    "followers": 885559
+  },
+  {
+    "movieName": "Avengers: Infinity War",
+    "name": "Tom Hiddleston",
+    "tweets": 1856,
+    "following": 1347,
+    "followers": 3580712
+  },
+  {
+    "movieName": "Star Wars: The Last Jedi",
+    "name": "Mark Hamill",
+    "tweets": 12506,
+    "following": 386,
+    "followers": 2952020
+  },
+  {
+    "movieName": "Star Wars: The Last Jedi",
+    "name": "Carrie Fisher",
+    "tweets": 2151,
+    "following": 522,
+    "followers": 1118478
+  },
+  {
+    "movieName": "Star Wars: The Last Jedi",
+    "name": "John Boyega",
+    "tweets": 2114,
+    "following": 428,
+    "followers": 1445954
+  },
+  {
+    "movieName": "Star Wars: The Last Jedi",
+    "name": "Andy Serkis",
+    "tweets": 295,
+    "following": 98,
+    "followers": 203763
+  },
+  {
+    "movieName": "Star Wars: The Last Jedi",
+    "name": "Anthony Daniels",
+    "tweets": 2294,
+    "following": 0,
+    "followers": 106333
+  },
+  {
+    "movieName": "The Hunger Games: Catching Fire",
+    "name": "Liam Hemsworth",
+    "tweets": 175,
+    "following": 63,
+    "followers": 1732317
+  },
+  {
+    "movieName": "The Hunger Games: Catching Fire",
+    "name": "Jack Quaid",
+    "tweets": 4663,
+    "following": 842,
+    "followers": 43727
+  },
+  {
+    "movieName": "The Hunger Games: Catching Fire",
+    "name": "Woody Harrelson",
+    "tweets": 3,
+    "following": 0,
+    "followers": 34980
+  },
+  {
+    "movieName": "The Hunger Games: Catching Fire",
+    "name": "Josh Hutcherson",
+    "tweets": 574,
+    "following": 119,
+    "followers": 2667369
+  },
+  {
+    "movieName": "The Hunger Games: Catching Fire",
+    "name": "Lenny Kravitz",
+    "tweets": 2425,
+    "following": 1811,
+    "followers": 5003717
+  },
+  {
+    "movieName": "Toy Story 3",
+    "name": "Tom Hanks",
+    "tweets": 872,
+    "following": 25,
+    "followers": 15423186
+  },
+  {
+    "movieName": "Toy Story 3",
+    "name": "Tim Allen",
+    "tweets": 1286,
+    "following": 36,
+    "followers": 367642
+  },
+  {
+    "movieName": "Toy Story 3",
+    "name": "Don Rickles",
+    "tweets": 440,
+    "following": 2,
+    "followers": 187552
+  },
+  {
+    "movieName": "Toy Story 3",
+    "name": "Michael Keaton",
+    "tweets": 919,
+    "following": 28,
+    "followers": 474988
+  },
+  {
+    "movieName": "Toy Story 3",
+    "name": "John Ratzenberger",
+    "tweets": 731,
+    "following": 7099,
+    "followers": 48476
+  },
+  {
+    "movieName": "Shrek 2",
+    "name": "Cameron Diaz",
+    "tweets": 467,
+    "following": 78,
+    "followers": 685076
+  },
+  {
+    "movieName": "Shrek 2",
+    "name": "Julie Andrews",
+    "tweets": 42,
+    "following": 34,
+    "followers": 35725
+  },
+  {
+    "movieName": "Shrek 2",
+    "name": "Antonio Banderas",
+    "tweets": 4415,
+    "following": 606,
+    "followers": 710410
+  },
+  {
+    "movieName": "Shrek 2",
+    "name": "John Cleese",
+    "tweets": 6215,
+    "following": 200,
+    "followers": 5642748
+  },
+  {
+    "movieName": "Shrek 2",
+    "name": "Jennifer Saunders",
+    "tweets": 7479,
+    "following": 223,
+    "followers": 610544
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Bryan Cranston",
+    "tweets": 668,
+    "following": 73,
+    "followers": 2126551
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Aaron Paul",
+    "tweets": 2294,
+    "following": 548,
+    "followers": 2671308
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Dean Norris",
+    "tweets": 2260,
+    "following": 179,
+    "followers": 510949
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "RJ Mitte",
+    "tweets": 10689,
+    "following": 2271,
+    "followers": 231292
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Bob Odenkirk",
+    "tweets": 897,
+    "following": 32,
+    "followers": 510662
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Steven Michael Quezada",
+    "tweets": 4837,
+    "following": 1587,
+    "followers": 18136
+  },
+  {
+    "movieName": "Breaking Bad",
+    "name": "Giancarlo Esposito",
+    "tweets": 2243,
+    "following": 396,
+    "followers": 160922
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Ryan Reynolds",
+    "tweets": 1133,
+    "following": 380,
+    "followers": 12345110
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Morena Baccarin",
+    "tweets": 2697,
+    "following": 162,
+    "followers": 364304
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Julian Dennison",
+    "tweets": 679,
+    "following": 226,
+    "followers": 9931
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Karan Soni",
+    "tweets": 114,
+    "following": 77,
+    "followers": 14674
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Stefan Kapi%u010Di%u0107",
+    "tweets": 5445,
+    "following": 2403,
+    "followers": 43377
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Brianna Hildebrand",
+    "tweets": 1073,
+    "following": 248,
+    "followers": 60646
+  },
+  {
+    "movieName": "Deadpool 2",
+    "name": "Leslie Uggams",
+    "tweets": 1572,
+    "following": 357,
+    "followers": 9598
+  },
+  {
+    "movieName": "Dunkirk",
+    "name": "Fionn Whitehead",
+    "tweets": 1,
+    "following": 1,
+    "followers": 29188
+  },
+  {
+    "movieName": "Dunkirk",
+    "name": "Aneurin Barnard",
+    "tweets": 6284,
+    "following": 511,
+    "followers": 57116
+  },
+  {
+    "movieName": "Dunkirk",
+    "name": "Barry Keoghan",
+    "tweets": 4010,
+    "following": 849,
+    "followers": 31423
+  },
+  {
+    "movieName": "Dunkirk",
+    "name": "Tom Glynn-Carney",
+    "tweets": 524,
+    "following": 256,
+    "followers": 28107
+  },
+  {
+    "movieName": "Dunkirk",
+    "name": "Harry Styles",
+    "tweets": 5489,
+    "following": 2010,
+    "followers": 32978272
+  },
+  {
+    "movieName": "Caddyshack",
+    "name": "Chevy Chase",
+    "tweets": 60,
+    "following": 25,
+    "followers": 64395
+  },
+  {
+    "movieName": "Caddyshack",
+    "name": "Rodney Dangerfield",
+    "tweets": 684,
+    "following": 952,
+    "followers": 22429
+  },
+  {
+    "movieName": "Caddyshack",
+    "name": "Michael O'Keefe",
+    "tweets": 7171,
+    "following": 3509,
+    "followers": 6871
+  },
+  {
+    "movieName": "Caddyshack",
+    "name": "Scott Colomby",
+    "tweets": 43,
+    "following": 34,
+    "followers": 87
+  },
+  {
+    "movieName": "Caddyshack",
+    "name": "Cindy Morgan",
+    "tweets": 3975,
+    "following": 247,
+    "followers": 3429
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Vin Diesel",
+    "tweets": 21,
+    "following": 0,
+    "followers": 230049
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Paul Walker",
+    "tweets": 2189,
+    "following": 64,
+    "followers": 2509600
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Michelle Rodriguez",
+    "tweets": 5245,
+    "following": 144,
+    "followers": 1026728
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Jordana Brewster",
+    "tweets": 7178,
+    "following": 362,
+    "followers": 710797
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Tyrese Gibson",
+    "tweets": 45042,
+    "following": 3786,
+    "followers": 3121306
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Ludacris",
+    "tweets": 21251,
+    "following": 322,
+    "followers": 11543612
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Dwayne Johnson",
+    "tweets": 22370,
+    "following": 262,
+    "followers": 13022013
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Lucas Black",
+    "tweets": 2013,
+    "following": 266,
+    "followers": 70435
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Nathalie Emmanuel",
+    "tweets": 18469,
+    "following": 1407,
+    "followers": 299289
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Elsa Pataky",
+    "tweets": 405,
+    "following": 199,
+    "followers": 57500
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Gal Gadot",
+    "tweets": 1454,
+    "following": 114,
+    "followers": 2037551
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "John Brotherton",
+    "tweets": 483,
+    "following": 1405,
+    "followers": 9406
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Luke Evans",
+    "tweets": 4313,
+    "following": 514,
+    "followers": 477468
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Tony Jaa",
+    "tweets": 2294,
+    "following": 690,
+    "followers": 69438
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Djimon Hounsou",
+    "tweets": 2352,
+    "following": 140,
+    "followers": 78163
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Ali Zafal",
+    "tweets": 9862,
+    "following": 532,
+    "followers": 67041
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Sung Kang",
+    "tweets": 2515,
+    "following": 227,
+    "followers": 259725
+  },
+  {
+    "movieName": "Furious 7",
+    "name": "Ronda Rousey",
+    "tweets": 14103,
+    "following": 913,
+    "followers": 3648415
+  }
+]
