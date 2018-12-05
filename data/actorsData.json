@@ -28,13 +28,6 @@
     "followers": 220056
   },
   {
-    "movieName": "Creed II",
-    "name": "Florian Munteanu",
-    "tweets": 105,
-    "following": 0,
-    "followers": 4688
-  },
-  {
     "movieName": "Avengers: Infinity War",
     "name": "Robert Downey Jr.",
     "tweets": 560,
@@ -133,13 +126,6 @@
     "followers": 203763
   },
   {
-    "movieName": "Star Wars: The Last Jedi",
-    "name": "Anthony Daniels",
-    "tweets": 2294,
-    "following": 0,
-    "followers": 106333
-  },
-  {
     "movieName": "The Hunger Games: Catching Fire",
     "name": "Liam Hemsworth",
     "tweets": 175,
@@ -152,13 +138,6 @@
     "tweets": 4663,
     "following": 842,
     "followers": 43727
-  },
-  {
-    "movieName": "The Hunger Games: Catching Fire",
-    "name": "Woody Harrelson",
-    "tweets": 3,
-    "following": 0,
-    "followers": 34980
   },
   {
     "movieName": "The Hunger Games: Catching Fire",
@@ -323,7 +302,7 @@
   },
   {
     "movieName": "Deadpool 2",
-    "name": "Stefan Kapi%u010Di%u0107",
+    "name": "Stefan Kapi\u010Di\u0107",
     "tweets": 5445,
     "following": 2403,
     "followers": 43377
@@ -411,13 +390,6 @@
     "tweets": 3975,
     "following": 247,
     "followers": 3429
-  },
-  {
-    "movieName": "Furious 7",
-    "name": "Vin Diesel",
-    "tweets": 21,
-    "following": 0,
-    "followers": 230049
   },
   {
     "movieName": "Furious 7",
