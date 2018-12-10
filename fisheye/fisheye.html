@@ -55,11 +55,13 @@ text {
 }
 
 #chart4 .dot {
-  stroke: #FFF;
+  stroke: #444;
+  stroke-width: 1.8px;
 }
 
 #chart1 .dot {
-  stroke: #FFF;
+  stroke: #444;
+  stroke-width: 1.8px
 }
 
 .axis path, .axis line {
@@ -252,6 +254,7 @@ text {
     // Add a title.
     function getTitle(d) {
       return `Name: ${d.name}\n` +
+        `Production: ${d.movieName}\n` +
         `Followers: ${d.followers}\n` +
         `Following: ${d.following}\n` +
         `Tweets: \t${d.tweets}`;
@@ -468,6 +471,7 @@ text {
     // Add a title.
     dot.append("title")
         .text(function(d) { return "Name: " + d.name 
+                                  + "\nProduction: " + d.movieName
                                   + "\nFollowers: " + numberWithCommas(d.followers) 
                                   + "\nFollowing: " + numberWithCommas(d.following)
                                   + "\nTweets: " + numberWithCommas(d.tweets); });
