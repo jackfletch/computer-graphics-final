@@ -1,6 +1,8 @@
 /* Copyright 2013 Michael Bostock. All rights reserved. Do not copy. */
 
 @import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
+@import url(https://fontlibrary.org/face/glacial-indifference);
+@import url(https://use.typekit.net/xti7oru.css);
 
 html {
   min-width: 1040px;
@@ -9,7 +11,7 @@ html {
 .ocks-org body {
   background: #fcfcfa;
   color: #333;
-  font-family: "PT Serif", serif;
+  font-family: "minion-pro", serif;
   margin: 1em auto 4em auto;
   position: relative;
   width: 960px;
@@ -22,7 +24,7 @@ html {
 .ocks-org h2,
 .ocks-org h3,
 .ocks-org h4 {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'GlacialIndifferenceRegular';
 }
 
 .ocks-org h1,
