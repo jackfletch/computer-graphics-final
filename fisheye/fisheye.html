@@ -129,21 +129,22 @@ text {
     <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #8c564b;">Caddyshack</blockquote>
   </div>
   <p>
-    In the graph above, <b>fisheye distortion</b> magnifies the local region around the mouse,
-    while leaving the larger graph unaffected for context. The localized, circular nature of the distortion
-    can be seen clearly by applying it to a uniform grid:
+    In the graph above, <b>fisheye distortion</b> magnifies the circular focus region,
+    but leaves the rest of graph unaffected in order to preserve context. This magnification and circular focus
+    can be easily observed by using the distortion on a plain grid.
   </p>
   <p id="chart2"></p>
   <p>
-    This type of distortion is particularly useful for disambiguating edge-crossings in static network layouts:
-    edges between distant nodes are distorted more strongly than local ones.
+    Fisheye distortion is great for use with network layouts and force-directed graphs as
+    edges to nodes that are close together are distorted less than those that belong to nodes farther
+    away on the graph or map, but fisheye distortion is not the distortion of choice for scatterplots.
   </p>
   <h2>Cartesian Distortion</h2>
   <p>
-    Circular fisheye is only one of many possible distortion functions.
     Two disadvantages of circular distortion are that it compresses (rather than magnifies)
     the area near the circumference of the circle, and that it requires curved grid lines to show the distortion accurately.
-    The latter makes it unsuitable for visualizations that have quantitative position encodings, such as scatterplots.
+    The compression on the area near the circumference is not optimal, but the need for curved gridlines for an accurate depiction
+    of the graph make the fisheye distortion a poor choice for scatterplots.
   </p>
   <p>
     <a href="http://dl.acm.org/citation.cfm?id=142763">Sarkar and Brown</a> recommend
@@ -152,7 +153,7 @@ text {
   </p>
   <p id="chart3"></p>
   <p>
-    With this technique, straight lines parallel to the <i>x</i> or <i>y</i> axis remain straight even after distortion.
+    With this technique, straight lines parallel to either axis remain straight even after distortion.
     This means you can use standard axes in conjunction with fisheye distortion in scatterplots:
   </p>
   <p id="chart4"></p>
@@ -170,10 +171,6 @@ text {
     <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #c5b0d5;">Dunkirk</blockquote>
     <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #8c564b;">Caddyshack</blockquote>
   </div>
-  <p>
-    Fisheye distortion allows you to zoom into small areas of the chart without losing sense of the overall distribution.
-    With distortion, you can easily differentiate individual countries while retaining context.
-  </p>
   <h2>Implementation</h2>
   <p>
     These examples use D3’s <a href="https://github.com/d3/d3-plugins/tree/master/fisheye">fisheye plugin</a>,
