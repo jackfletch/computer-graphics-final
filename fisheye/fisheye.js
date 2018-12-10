@@ -93,7 +93,6 @@ var superscript = "⁰¹²³⁴⁵⁶⁷⁸⁹";
 var formatPower = function(d) { return (d + "").split("").map(function(c) { return superscript[c]; }).join(""); };
 function formatTick(d) {
   var log = Math.log(d) / Math.LN10;
-  console.log(d, log, Math.abs(Math.round(log) - log), Math.abs(Math.round(log) - log) < 1e-6);
   if (Math.abs(Math.round(log) - log) < 1e-6) {
     return "10" + formatPower(Math.round(log));
   }
