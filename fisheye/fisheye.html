@@ -85,8 +85,13 @@ text {
   <h1>Graph Distortions</h1>
   <h4>Fisheye vs. Cartesian</h4>
   <button class="collapsible">Project Info</button>
-  <div class="content" style="margin-top: 0">
-    <blockquote style="color: #444; font-size: 14px;">
+  <div class="content" style="margin-top: 0;">
+    <blockquote style="color: #444; 
+    font-size: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 1em 0 0 0;
+    background-image: linear-gradient(#fcfcfa, #f3f3f3);">
     This project will look at two different distortion techniques.  Both graphs focus on the Twitter accounts 
     of cast members from popular movies (and the greatest TV show of all time, Breaking Bad).  For each graph,
     the number of people the cast member follows is on the x-axis and the number of followers he or she has is
@@ -109,6 +114,24 @@ text {
     of the circle of focus is not pushed outward.
   </p>
   <p id="chart1"></p>
+  <button class="collapsible">Graph Legend</button>
+  <div class="content" style="margin-top: 0; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    background-image: linear-gradient(#fcfcfa, #f3f3f3);
+    margin-top: 1em;">
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #1f77b4;">Furious 7</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #aec7e8;">Creed II</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ff7f0e;">Avengers: Infinity War</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ffbb78;">Star Wars: The Last Jedi</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #2ca02c;">The Hunger Games: Catching Fire</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #98df8a;">Toy Story 3</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #d62728;">Shrek 2</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ff9896;">Breaking Bad</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #9467bd;">Deadpool 2</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #c5b0d5;">Dunkirk</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #8c564b;">Caddyshack</blockquote>
+  </div>
   <p>
     In the graph above, <b>fisheye distortion</b> magnifies the local region around the mouse,
     while leaving the larger graph unaffected for context. The localized, circular nature of the distortion
@@ -137,6 +160,24 @@ text {
     This means you can use standard axes in conjunction with fisheye distortion in scatterplots:
   </p>
   <p id="chart4"></p>
+  <button class="collapsible">Graph Legend</button>
+  <div class="content" style="margin-top: 0; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    background-image: linear-gradient(#fcfcfa, #f3f3f3);
+    margin-top: 1em;">
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #1f77b4;">Furious 7</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #aec7e8;">Creed II</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ff7f0e;">Avengers: Infinity War</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ffbb78;">Star Wars: The Last Jedi</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #2ca02c;">The Hunger Games: Catching Fire</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #98df8a;">Toy Story 3</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #d62728;">Shrek 2</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #ff9896;">Breaking Bad</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #9467bd;">Deadpool 2</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #c5b0d5;">Dunkirk</blockquote>
+    <blockquote class="legend" style="color: #444; font-size: 14px; border-color: #8c564b;">Caddyshack</blockquote>
+  </div>
   <p>
     Fisheye distortion allows you to zoom into small areas of the chart without losing sense of the overall distribution.
     With distortion, you can easily differentiate individual countries while retaining context.

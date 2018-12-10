@@ -46,6 +46,8 @@ h1 {
 
 h2 {
   margin-top: 2em;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #799bb6;
 }
 
 h4 {
@@ -104,12 +106,15 @@ sup, sub {
 }
 
 blockquote {
-  border-left: 10px solid #799bb6;
+  border-left: 10px solid;
+  border-color: #799bb6;
   padding: .5em 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-image: linear-gradient(#fcfcfa, #f3f3f3);
-  margin: 1em 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.legend {
+  width: 25%;
+  display: inline-block;
 }
 
 .content {

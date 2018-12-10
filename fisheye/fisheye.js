@@ -132,7 +132,8 @@ for (i = 0; i < coll.length; i++) {
   var xScale = d3.scale.log().domain([1, 1e4]).range([0, width]),
       yScale = d3.scale.log().domain([1e1, 1e8]).range([height, 0]),
       radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 50]),
-      colorScale = d3.scale.category10().domain([
+      colorScale = d3.scale.category20().domain([
+        "Furious 7",
         "Creed II",
         "Avengers: Infinity War",
         "Star Wars: The Last Jedi",
@@ -142,8 +143,7 @@ for (i = 0; i < coll.length; i++) {
         "Breaking Bad",
         "Deadpool 2",
         "Dunkirk",
-        "Caddyshack",
-        "Furious 7"
+        "Caddyshack"
       ]);
 
   var fisheye = d3.fisheye.circular()
@@ -378,7 +378,7 @@ for (i = 0; i < coll.length; i++) {
   var xScale = d3.fisheye.scale(d3.scale.log).domain([1, 1e4]).range([0, width]),
       yScale = d3.fisheye.scale(d3.scale.log).domain([1e1, 1e8]).range([height, 0]),
       radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 40]),
-      colorScale = d3.scale.category10().domain(["Creed II", "Avengers: Infinity War", 
+      colorScale = d3.scale.category20().domain(["Creed II", "Avengers: Infinity War", 
         "Star Wars: The Last Jedi", "The Hunger Games: Catching Fire", "Toy Story 3", 
         "Shrek 2", "Breaking Bad", "Deadpool 2", "Dunkirk", "Caddyshack", "Furious 7"]);
 
