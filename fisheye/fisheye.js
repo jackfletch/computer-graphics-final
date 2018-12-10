@@ -131,7 +131,7 @@ for (i = 0; i < coll.length; i++) {
   // Various scales and distortions.
   var xScale = d3.scale.log().domain([1, 1e4]).range([0, width]),
       yScale = d3.scale.log().domain([1e1, 1e8]).range([height, 0]),
-      radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 50]),
+      radiusScale = d3.scale.sqrt().domain([0, 50000]).range([4, 40]),
       colorScale = d3.scale.category20().domain([
         "Furious 7",
         "Creed II",
@@ -377,7 +377,7 @@ for (i = 0; i < coll.length; i++) {
   // Various scales and distortions.
   var xScale = d3.fisheye.scale(d3.scale.log).domain([1, 1e4]).range([0, width]).focus(600),
       yScale = d3.fisheye.scale(d3.scale.log).domain([1e1, 1e8]).range([height, 0]).focus(100),
-      radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 40]),
+      radiusScale = d3.scale.sqrt().domain([0, 50000]).range([4, 40]),
       colorScale = d3.scale.category20().domain([
         "Furious 7",
         "Creed II",
