@@ -1,9 +1,7 @@
 /* Copyright 2013 Michael Bostock. All rights reserved. Do not copy. */
 
 @import url(//fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i|PT+Sans|PT+Sans:b);
-/* @import url(https://fontlibrary.org/face/glacial-indifference); */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url(https://use.typekit.net/xti7oru.css);
 
 html {
   min-width: 1040px;
@@ -12,7 +10,6 @@ html {
 body {
   background: #fcfcfa;
   color: #333;
-  /* font-family: "minion-pro", serif; */
   font-family: "Roboto", serif;
   margin: 1em auto 4em auto;
   position: relative;
@@ -31,8 +28,7 @@ body {
 
  h1,
  h2,
- h3,
- h4 {
+ h3 {
   color: #000;
 }
 
@@ -45,11 +41,19 @@ h1 {
   font-size: 64px;
   font-weight: 300;
   letter-spacing: -2px;
-  margin: .3em 0 .1em 0;
+  margin: .3em 0 0 0;
 }
 
 h2 {
   margin-top: 2em;
+}
+
+h4 {
+  color: #808080;
+  font-style: italic;
+  margin: 0 0 0 0;
+  font-size: 20px;
+  font-weight: 100;
 }
 
 header,
@@ -97,4 +101,46 @@ svg {
 
 sup, sub {
   line-height: 0;
+}
+
+blockquote {
+  border-left: 10px solid #799bb6;
+  padding: .5em 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: linear-gradient(#fcfcfa, #f3f3f3);
+  margin: 1em 0 0 0;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color : #799bb6;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  padding-left: 23px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  margin: .5em 0 0 0;
+}
+
+.collapsible:after {
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 white;
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }

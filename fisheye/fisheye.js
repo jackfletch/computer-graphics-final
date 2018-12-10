@@ -101,10 +101,25 @@ function formatTick(d) {
   }
 }
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+} 
+
 (function chart1() {
   // Various accessors that specify the four dimensions of data to visualize.
-  function x(d) { return d.followers; }
-  function y(d) { return d.following; }
+  function x(d) { return d.following; }
+  function y(d) { return d.followers; }
   function radius(d) { return d.tweets; }
   function color(d) { return d.movieName; }
 
@@ -114,8 +129,8 @@ function formatTick(d) {
       height = 500 - margin.top - margin.bottom;
 
   // Various scales and distortions.
-  var xScale = d3.scale.log().domain([1e1, 1e8]).range([0, width]),
-      yScale = d3.scale.log().domain([1, 1e4]).range([height, 0]),
+  var xScale = d3.scale.log().domain([1, 1e4]).range([0, width]),
+      yScale = d3.scale.log().domain([1e1, 1e8]).range([height, 0]),
       radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 50]),
       colorScale = d3.scale.category10().domain([
         "Creed II",
@@ -177,7 +192,7 @@ function formatTick(d) {
       .attr("text-anchor", "end")
       .attr("x", width - 6)
       .attr("y", height - 6)
-      .text("number of followers");
+      .text("accounts followed");
 
   // Add a y-axis label.
   svg.append("text")
@@ -187,7 +202,7 @@ function formatTick(d) {
       .attr("y", 6)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
-      .text("number of people followed by individual");
+      .text("followers");
 
   // Load the data.
   d3.json("../../data/actorsData.json", function(actors) {
@@ -200,14 +215,14 @@ function formatTick(d) {
       .enter().append("circle")
         .attr("class", "dot")
         .style("fill", function(d) { return colorScale(color(d)); })
-        .attr("x", function (d) { return d.followers})
-        .attr("y", function (d) { return d.following})
+        .attr("x", function (d) { return d.following})
+        .attr("y", function (d) { return d.followers})
         .call(position)
         .sort(function(a, b) { return radius(b) - radius(a); });
 
     dot.forEach(function (d) {
-      d.x = d.followers;
-      d.y = d.following;
+      d.x = d.following;
+      d.y = d.followers;
     })
 
     // Add a title.
@@ -235,8 +250,8 @@ function formatTick(d) {
       fisheye.focus(d3.mouse(this));
 
       actorPoints.each(function(d) {
-        d.x = xScale(d.followers);
-        d.y = yScale(d.following);
+        d.x = xScale(d.following);
+        d.y = yScale(d.followers);
         d.fisheye = fisheye(d);
       })
         .attr("cx", function (d) { return d.fisheye.x; })
@@ -349,8 +364,8 @@ function formatTick(d) {
 (function chart4() {
 
   // Various accessors that specify the four dimensions of data to visualize.
-  function x(d) { return d.followers; }
-  function y(d) { return d.following; }
+  function x(d) { return d.following; }
+  function y(d) { return d.followers; }
   function radius(d) { return d.tweets; }
   function color(d) { return d.movieName; }
 
@@ -360,8 +375,8 @@ function formatTick(d) {
       height = 500 - margin.top - margin.bottom;
 
   // Various scales and distortions.
-  var xScale = d3.fisheye.scale(d3.scale.log).domain([1e1, 1e8]).range([0, width]),
-      yScale = d3.fisheye.scale(d3.scale.log).domain([1, 1e4]).range([height, 0]),
+  var xScale = d3.fisheye.scale(d3.scale.log).domain([1, 1e4]).range([0, width]),
+      yScale = d3.fisheye.scale(d3.scale.log).domain([1e1, 1e8]).range([height, 0]),
       radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 40]),
       colorScale = d3.scale.category10().domain(["Creed II", "Avengers: Infinity War", 
         "Star Wars: The Last Jedi", "The Hunger Games: Catching Fire", "Toy Story 3", 
@@ -401,7 +416,7 @@ function formatTick(d) {
       .attr("text-anchor", "end")
       .attr("x", width - 6)
       .attr("y", height - 6)
-      .text("number of followers");
+      .text("accounts followed");
 
   // Add a y-axis label.
   svg.append("text")
@@ -411,7 +426,7 @@ function formatTick(d) {
       .attr("y", 6)
       .attr("dy", ".75em")
       .attr("transform", "rotate(-90)")
-      .text("number of people followed by individual");
+      .text("followers");
 
   // Load the data.
   d3.json("../../data/actorsData.json", function(actors) {
