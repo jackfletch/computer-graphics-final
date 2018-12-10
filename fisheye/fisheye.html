@@ -47,11 +47,14 @@ text {
 }
 
 #chart4 .background {
-  fill: #ddd;
+  fill: #d0d0d0;
 }
 
 #chart1 .background {
-  fill: #ddd;
+  fill: #d0d0d0;
+}
+#chart1 line {
+  stroke: #fff;
 }
 
 #chart4 .dot {
@@ -96,8 +99,6 @@ text {
   <p>
     This type of distortion is particularly useful for disambiguating edge-crossings in static network layouts:
     edges between distant nodes are distorted more strongly than local ones.
-    If you dislike the chaotic appearance of <a href="http://mbostock.github.com/d3/ex/force.html">dynamic force layout</a>,
-    consider using distortion instead.
   </p>
   <h2><a name="cartesian" href="#cartesian">#</a>Cartesian Distortion</h2>
   <p>
@@ -107,7 +108,7 @@ text {
     The latter makes it unsuitable for visualizations that have quantitative position encodings, such as scatterplots.
   </p>
   <p>
-    <a href="http://dl.acm.org/citation.cfm?id=142763">Sarkar and Brown</a> therefore recommend
+    <a href="http://dl.acm.org/citation.cfm?id=142763">Sarkar and Brown</a> recommend
     a different function that magnifies continuously so as to avoid local minification.
     Furthermore, they demonstrate applying the distortion to each dimension separately, resulting in <i>Cartesian distortion</i>:
   </p>
@@ -119,9 +120,7 @@ text {
   <p id="chart4"></p>
   <p>
     Fisheye distortion allows you to zoom into small areas of the chart without losing sense of the overall distribution.
-    For example, the Western European countries (purple) are densely clustered in the <a href="../nations/">original chart</a>,
-    making them difficult to compare; with distortion, you can easily differentiate individual countries while retaining
-    global context and comparing regions.
+    With distortion, you can easily differentiate individual countries while retaining context.
   </p>
   <h2><a name="implementation" href="#implementation">#</a>Implementation</h2>
   <p>
