@@ -53,10 +53,18 @@ text {
 }
 
 #chart4 .background {
-  fill: #eee;
+  fill: #ddd;
+}
+
+#chart5 .background {
+  fill: #ddd;
 }
 
 #chart4 .dot {
+  stroke: #FFF;
+}
+
+#chart5 .dot {
   stroke: #FFF;
 }
 
@@ -319,8 +327,8 @@ text {
         "Shrek 2", "Breaking Bad", "Deadpool 2", "Dunkirk", "Caddyshack", "Furious 7"]);
 
   // The x & y axes.
-  var xAxis = d3.svg.axis().orient("bottom").scale(xScale).tickSize(-height),
-      yAxis = d3.svg.axis().scale(yScale).orient("left").tickSize(-width);
+  var xAxis = d3.svg.axis().orient("bottom").scale(xScale).tickSize(-height).tickFormat(d => formatTick(d)),
+      yAxis = d3.svg.axis().scale(yScale).orient("left").tickSize(-width).tickFormat(d => formatTick(d));
 
   // Create the SVG container and set the origin.
   var svg = d3.select("#chart4").append("svg")
@@ -439,24 +447,10 @@ text {
     .distortion(3.5)
     .radius(120);
 
-  var superscript = "⁰¹²³⁴⁵⁶⁷⁸⁹";
-  var formatPower = function(d) { return (d + "").split("").map(function(c) { return superscript[c]; }).join(""); };
-  function formatTick(d) {
-    var log = Math.log(d) / Math.LN10;
-    console.log(d, log, Math.abs(Math.round(log) - log), Math.abs(Math.round(log) - log) < 1e-6);
-    if (Math.abs(Math.round(log) - log) < 1e-6) {
-      return "10" + formatPower(Math.round(log));
-    }
-    else {
-      return "";
-    }
-  }
-
   // The x & y axes.
   var xAxis = d3.svg.axis()
     .orient("bottom")
     .scale(xScale)
-    // .tickFormat(d3.format(",d"))
     .tickFormat(d => formatTick(d))
     .tickSize(-height);
     var yAxis = d3.svg.axis()
@@ -466,7 +460,7 @@ text {
     .tickSize(-width);
 
   // Create the SVG container and set the origin.
-  var svg = d3.select("#chart4").append("svg")
+  var svg = d3.select("#chart5").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -527,10 +521,6 @@ text {
       d.x = d.followers;
       d.y = d.following;
     })
-
-    function numberWithCommas(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
 
     // Add a title.
     function getTitle(d) {
