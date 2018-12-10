@@ -47,7 +47,7 @@ text {
   shape-rendering: crispEdges;
 }
 
-#chart4 {
+#chart4 #chart5 {
   margin-left: -40px;
   height: 506px;
 }
@@ -100,6 +100,7 @@ text {
 <p>With this technique, straight lines parallel to the <i>x</i> or <i>y</i> axis remain straight even after distortion. This means you can use standard axes in conjunction with fisheye distortion in scatterplots:
 
 <p id="chart4">
+<p id="chart5">
 
 <p>Fisheye distortion allows you to zoom into small areas of the chart without losing sense of the overall distribution. For example, the Western European countries (purple) are densely clustered in the <a href="../nations/">original chart</a>, making them difficult to compare; with distortion, you can easily differentiate individual countries while retaining global context and comparing regions.
 
@@ -402,5 +403,216 @@ text {
     });
   });
 })();
+
+(function chart5() {
+
+  // Various accessors that specify the four dimensions of data to visualize.
+  function x(d) { return d.followers; }
+  function y(d) { return d.following; }
+  function radius(d) { return d.tweets; }
+  function color(d) { return d.movieName; }
+
+  // Chart dimensions.
+  var margin = {top: 5.5, right: 19.5, bottom: 12.5, left: 39.5},
+      width = 960,
+      height = 500 - margin.top - margin.bottom;
+
+  // Various scales and distortions.
+  var xScale = d3.scale.log().domain([1e1, 1e8]).range([0, width]),
+      yScale = d3.scale.log().domain([1, 1e4]).range([height, 0]),
+      radiusScale = d3.scale.sqrt().domain([0, 50000]).range([2, 50]),
+      colorScale = d3.scale.category10().domain([
+        "Creed II",
+        "Avengers: Infinity War",
+        "Star Wars: The Last Jedi",
+        "The Hunger Games: Catching Fire",
+        "Toy Story 3",
+        "Shrek 2",
+        "Breaking Bad",
+        "Deadpool 2",
+        "Dunkirk",
+        "Caddyshack",
+        "Furious 7"
+      ]);
+
+  var fisheye = d3.fisheye.circular()
+    // .focus([360, 90])
+    .distortion(3.5)
+    .radius(120);
+
+  var superscript = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+  var formatPower = function(d) { return (d + "").split("").map(function(c) { return superscript[c]; }).join(""); };
+  function formatTick(d) {
+    var log = Math.log(d) / Math.LN10;
+    console.log(d, log, Math.abs(Math.round(log) - log), Math.abs(Math.round(log) - log) < 1e-6);
+    if (Math.abs(Math.round(log) - log) < 1e-6) {
+      return "10" + formatPower(Math.round(log));
+    }
+    else {
+      return "";
+    }
+    // return 10 + formatPower(Math.round(Math.log(d) / Math.LN10)); 
+  }
+
+  // The x & y axes.
+  var xAxis = d3.svg.axis()
+    .orient("bottom")
+    .scale(xScale)
+    // .tickFormat(d3.format(",d"))
+    .tickFormat(d => formatTick(d))
+    .tickSize(-height);
+    var yAxis = d3.svg.axis()
+    .orient("left")
+    .scale(yScale)
+    .tickFormat(d => formatTick(d))
+    .tickSize(-width);
+
+  // Create the SVG container and set the origin.
+  var svg = d3.select("#chart4").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // Add a background rect for mousemove.
+  svg.append("rect")
+      .attr("class", "background")
+      .attr("width", width)
+      .attr("height", height);
+
+  // Add the x-axis.
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  // Add the y-axis.
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+
+  // Add an x-axis label.
+  svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width - 6)
+      .attr("y", height - 6)
+      .text("number of followers");
+
+  // Add a y-axis label.
+  svg.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -6)
+      .attr("y", 6)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("number of people followed by individual");
+
+  // Load the data.
+  d3.json("../../data/actorsData.json", function(actors) {
+
+    // Add a dot per nation. Initialize the data at 1800, and set the colors.
+    var dot = svg.append("g")
+        .attr("class", "dots")
+      .selectAll(".dot")
+        .data(actors)
+      .enter().append("circle")
+        .attr("class", "dot")
+        .style("fill", function(d) { return colorScale(color(d)); })
+        .attr("x", function (d) { return d.followers})
+        .attr("y", function (d) { return d.following})
+        .call(position)
+        .sort(function(a, b) { return radius(b) - radius(a); });
+
+    dot.forEach(function (d) {
+      d.x = d.followers;
+      d.y = d.following;
+    })
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    // Add a title.
+    function getTitle(d) {
+      // console.log(d);
+      return `Name: ${d.name}\n` +
+        `Followers: ${d.followers}\n` +
+        `Following: ${d.following}\n` +
+        `Tweets: \t${d.tweets}`;
+      // return `Name: ${d.name}\n` +
+      //   `Followers: ${numberWithCommas(d.followers)}\n` +
+      //   `Following: ${numberWithCommas(d.following)}\n`
+      //   `Tweets: ${numberWithCommas(d.tweets)}`;
+    }
+
+    dot.append("title")
+      .text(d => getTitle(d));
+
+    // Positions the dots based on data.
+    function position(dot) {
+      dot.attr("cx", function(d) { return xScale(x(d)); })
+        .attr("cy", function(d) { return yScale(y(d)); })
+        .attr("r", function(d) { return radiusScale(radius(d)); });
+    }
+
+    // svg.on("mousemove", function() {
+    //   var mouse = d3.mouse(this);
+    //   xScale.distortion(2.5).focus(mouse[0]);
+    //   yScale.distortion(2.5).focus(mouse[1]);
+
+    //   dot.call(position);
+    //   svg.select(".x.axis").call(xAxis);
+    //   svg.select(".y.axis").call(yAxis);
+    // });
+
+    // var path = svg.selectAll(".dot")
+    //   .each(function(d) { d.fisheye = fisheye(d); })
+    //   .attr("cx", function (d) { return d.fisheye.x; })
+    //   .attr("cy", function (d) { return d.fisheye.y; })
+    //   .attr("r", function (d) { return d.fisheye.r; });
+
+    // var path = svg.selectAll(".dot")
+    //   .attr(".dot", fisheyed);
+    var actorPoints = svg.selectAll(".dot");
+
+    svg.on("mousemove", function() {
+      fisheye.focus(d3.mouse(this));
+      // console.log(d3.mouse(this));
+
+      actorPoints.each(function(d) {
+        d.x = xScale(d.followers);
+        d.y = yScale(d.following);
+        d.fisheye = fisheye(d);
+        // console.log(d);
+      })
+        .attr("cx", function (d) { return d.fisheye.x; })
+        .attr("cy", function (d) { return d.fisheye.y; })
+        .attr("r", function (d) { return radiusScale(d.fisheye.z * radius(d)); });
+
+
+      // node.each(function(d) { d.fisheye = fisheye(d); })
+      //   .attr("cx", function(d) { return d.fisheye.x; })
+      //   .attr("cy", function(d) { return d.fisheye.y; })
+      //   .attr("r", function(d) { return d.fisheye.z * 4.5; });
+    });
+
+
+    // svg.on("mousemove", function() {
+    //   fisheye.focus(d3.mouse(this));
+    //   path.attr("d", fisheyed);
+    // });
+
+    function fisheyed(d) {
+      return line(d.map(function(d) {
+        d = fisheye({x: d[0], y: d[1]});
+        return [d.x, d.y];
+      }));
+    }
+
+  });
+})();
+
 
 </script>
