@@ -73,7 +73,7 @@ footer {
   margin-top: 8em;
 }
 
-body > p, li > p {
+p {
   line-height: 1.5em;
 }
 
@@ -83,34 +83,6 @@ a {
 
 a:not(:hover) {
   text-decoration: none;
-}
-
-.html .value,
-.javascript .string,
-.javascript .regexp {
-  color: #756bb1;
-}
-
-.html .tag,
-.css .tag,
-.javascript .keyword {
-  color: #3182bd;
-}
-
-.comment {
-  color: #636363;
-}
-
-.html .doctype,
-.javascript .number {
-  color: #31a354;
-}
-
-.html .attribute,
-.css .attribute,
-.javascript .class,
-.javascript .special {
-  color: #e6550d;
 }
 
 svg {
