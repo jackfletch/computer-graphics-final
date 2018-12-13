@@ -476,5 +476,15 @@ for (i = 0; i < coll.length; i++) {
       svg.select(".x.axis").call(xAxis);
       svg.select(".y.axis").call(yAxis);
     });
+
+    svg.on("mouseleave", function() {
+      var mouse = d3.mouse(this);
+      xScale.distortion(2.5).focus(600);
+      yScale.distortion(2.5).focus(100);
+
+      dot.call(position);
+      svg.select(".x.axis").call(xAxis);
+      svg.select(".y.axis").call(yAxis);
+    });
   });
 })();
