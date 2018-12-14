@@ -147,13 +147,13 @@ text {
   </p>
   <p>
     <a href="http://dl.acm.org/citation.cfm?id=142763">Sarkar and Brown</a> recommend
-    a different function that magnifies continuously so as to avoid local minification.
-    Furthermore, they demonstrate applying the distortion to each dimension separately, resulting in <i>Cartesian distortion</i>:
+    a different function that magnifies continuously so as to avoid local compression around the edge of the distortion.
+    They apply the distortion to each dimension separately, resulting in <i>Cartesian distortion</i>:
   </p>
   <p id="chart3"></p>
   <p>
     With this technique, straight lines parallel to either axis remain straight even after distortion.
-    This means you can use standard axes in conjunction with fisheye distortion in scatterplots:
+    Therefore, you can use regular axes and tick marks/lines with cartesian distortion in scatterplots:
   </p>
   <p id="chart4"></p>
   <button class="collapsible">Graph Legend</button>
@@ -174,9 +174,6 @@ text {
   <p>
     These examples use D3’s <a href="https://github.com/d3/d3-plugins/tree/master/fisheye">fisheye plugin</a>,
     which supports both circular and Cartesian distortion.
-    The latter is implemented on top of D3’s <a href="https://github.com/mbostock/d3/wiki/Quantitative-Scales">quantitative scales</a>,
-    allowing distortion of linear, logarithmic, and exponential scales, as well as compatibility with D3’s
-    <a href="https://github.com/mbostock/d3/wiki/SVG-Axes">axis component</a>.
   </p>
 </body>
 <footer>
